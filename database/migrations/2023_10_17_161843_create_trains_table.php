@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('agency', 100);
             $table->string('departing_from', 50);
             $table->string('going_to', 50);
-            $table->string('leaving_time', 15);
-            $table->string('arrives_time', 15);
-            $table->string('id_train', 15);
-            $table->string('coach', 15);
-            $table->string('time', 15);
+            $table->DateTime('leaving_time', 5);
+            $table->DateTime('arrives_time', 5);
+            $table->tinyInteger('id_train')->unsigned();
+            $table->tinyInteger('coach')->unsigned();
+            $table->DateTime('time', 5);
             $table->string('deleted', 15);       
             $table->timestamps();
         });
