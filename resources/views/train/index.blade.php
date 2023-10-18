@@ -16,9 +16,17 @@
 
         @forelse($trains as $train)
           <p>
-            <strong>ID treno</strong>: {{ $train->id }} <br>
+            <strong>ID treno</strong>: {{ $train->id }}<br>
             <strong>Compagnia</strong>: {{ $train->agency }} <br>
-            <strong>Carrozza</strong>: {{ $train->coach }}
+            <strong>Partenza da</strong>: {{ $train->departing_from }} <br>
+            <strong>Arrivo a</strong>: {{ $train->going_to }}<br>
+            <strong>Orario partenza</strong>: {{ $train->leaving_time }}<br>
+            <strong>Orario arrivo:</strong>: {{ $train->arrives_time }}<br>
+            <strong>Numero treno</strong>: {{ $train->id_train }}<br>
+            <strong>Carrozza</strong>: {{ $train->coach }}<br>
+            <strong>In orario</strong>: {{ $train->time }}<br>
+            <strong>In ritardo</strong>: {{ $train->deleted }}
+
           </p>
           <hr>
         @empty
