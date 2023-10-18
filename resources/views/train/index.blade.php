@@ -24,8 +24,8 @@
             <strong>Orario arrivo:</strong>: {{ $train->arrives_time }}<br>
             <strong>Numero treno</strong>: {{ $train->id_train }}<br>
             <strong>Carrozza</strong>: {{ $train->coach }}<br>
-            <strong>In orario</strong>: {{ $train->time }}<br>
-            <strong>In ritardo</strong>: {{ $train->deleted }}
+            <strong>In orario</strong>: {{ $train->time==1?'Si': 'No' }} <br>
+            <strong>In ritardo</strong>: {{ $train->time==1?'No': 'Si' }}
 
           </p>
           <hr>
